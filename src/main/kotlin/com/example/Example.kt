@@ -14,8 +14,18 @@ import org.http4k.server.asServer
 val app: HttpHandler = routes(
     "/ping" bind GET to {
         Response(OK).body("pong")
+    },
+
+    "/factorial" bind GET to {
+        Response(OK).body(factorial(6).toString())
     }
 )
+
+fun factorial(n: Int): Int {
+
+    return if (n <= 1) 1
+    else n * factorial(n - 1)
+}
 
 fun main() {
     val printingApp: HttpHandler = PrintRequest().then(app)
