@@ -1,0 +1,26 @@
+# Compiled output
+/build/
+/out/
+
+# IntelliJ
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Mac OS
+.DS_Store
+
+# Gradle
+.gradle/
+gradle.properties
+
+# Compiled output
+*.class
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+

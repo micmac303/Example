@@ -1,0 +1,7 @@
+# Example
+
+## Package
+```
+./gradlew distZip
+```
+
