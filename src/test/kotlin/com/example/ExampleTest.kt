@@ -11,7 +11,11 @@ class ExampleTest {
 
     @Test
     fun `Ping test`() {
-        assertEquals(Response(OK).body("pong"), ExampleApi.routes(Request(GET, "/ping")))
+        assertEquals(Response(OK).body("pong"), ExampleApi.handler(Request(GET, "/api/v1/ping")))
     }
 
+    @Test
+    fun `Factorial test`() {
+        assertEquals(Response(OK).body("6"), ExampleApi.handler(Request(GET, "/api/v1/factorial/3")))
+    }
 }
